@@ -51,7 +51,25 @@ a {
     object-fit: contain;
     }
 
+.weather-forecast{
+    
+    text-align: center;
 
+}
+.weather-forecast-date{
+    font-size: 16px;
+    color: #0000;
+    opacity: 0.6;
+}
+.weather-forecast-temperatures{
+    font-size: 13px;
+}
+.weather-forecast-temperature-max{
+    font:bold;
+}
+.weather-forecast-temperature-min{
+    opacity: 0.7;
+}
 main {
     padding: 30px  0;
    
