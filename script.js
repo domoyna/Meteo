@@ -41,7 +41,7 @@ function formatDate(date) {
 }
 function searchCity(city) {
   let apiKey = "fbef01f4et1b02o0d25c27210a43ef3f";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query==${encodeURIComponent(
+  let apiUrl = ``https://api.shecodes.io/weather/v1/current?query=${encodeURIComponent(
     city
   )}&key=${apiKey}&units=metric`;
   console.log(apiUrl);
@@ -53,7 +53,15 @@ function handleSearchSubmit(event) {
   let searchInput = document.querySelector("#search-form-input");
   searchCity(searchInput.value);
 }
-function displayForecast() {
+
+function getForecast(city) {
+  let apiKey="fbef01f4et1b02o0d25c27210a43ef3f";
+  let apiUrl ="https://api.shecodes.io/weather/v1/forecast?query==${encodeURIComponent(
+    city
+  )}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+function displayForecast(response) {
   let forecast = document.querySelector("#forecast");
   let days = [
     "Tue",
@@ -71,9 +79,9 @@ function displayForecast() {
         <div class="weather-forecast-date">${day}</div>
         <div class="weather-forecast-icon"></div>
         <div class="weather-forecast-temperatures">
-        <div class-"weather-forecast-temperature-max"><strong>18°<strong></div>
+        <div class="weather-forecast-temperature-max"><strong>18°<strong></div>
         <div class="weather-forecast-temperature-min">15°</div>
-        </div>
+    </div>
         
         `;
   });
@@ -86,4 +94,4 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Antananarivo");
-displayForecast();
+getForecast();
