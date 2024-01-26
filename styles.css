@@ -52,8 +52,9 @@ a {
     }
 
 .weather-forecast{
-    
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 
 }
 .weather-forecast-date{
