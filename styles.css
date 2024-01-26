@@ -60,7 +60,7 @@ margin-top: 30px;
     text-align: center;
     display: flex;
     justify-content: space-between;
-
+    flex-direction: column;
 
 }
 
