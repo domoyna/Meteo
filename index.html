@@ -1,84 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald:wght@200;300;400;500;600;700&family=Playball&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald:wght@200;300;400;500;600;700&family=Playball&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 </head>
-<body >
-    
-    
+
+<body>
+
+
     <div class="weather-app">
-    <header>
-        
-         <form class="search-form"  id="search-form">
-            <input 
-            type ="Search"
-             placeholder ="Enter a city...".required
-             class="search-form-input"
-             id = "search-form-input"  />
-            <input
-             type ="submit"
-              value = "Search"
-              class="search-form-button"
-               />
-         </form>
-    </header>
-    <main>
-        <div class="weather-app-data">
-           <div>
-        <h1 class="weather-app-city" id="current-city">Paris</h1>
-        <p>
-            <span id="time"></span>, <span id="description"></span>
-            <br/>
-            Humidity: <strong id="humidity"></strong>,  Wind: <strong id="wind-speed"></strong>
-            
-        </p>
-           </div>
-        
-            
-    <div  class="emoji" id="emoji"> </div>
-            <div class="data" id="current-temperature"></div>
-            <div class="unit">°C</div>
-    <div class="weather-forecast">
-        <div class="row">
-            <div class="col-2">
-                <div class="weather-forecast-date">
-                    Thu
-                    <div>
-                        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt=""
-                            width="80" />
-                        <div class="weather-forecast-temperatures">
-                            <span class="weather-forecast-temperature-max">18</span>
-                            <span class="weather-forecast-temperature-min">12</span>
-    
+        <header>
+
+            <form class="search-form" id="search-form">
+                <input type="Search" placeholder="Enter a city..." .required class="search-form-input"
+                    id="search-form-input" />
+                <input type="submit" value="Search" class="search-form-button" />
+            </form>
+        </header>
+        <main>
+            <div class="weather-app-data">
+                <div>
+                    <h1 class="weather-app-city" id="current-city">Paris</h1>
+                    <p>
+                        <span id="time"></span>, <span id="description"></span>
+                        <br />
+                        Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind-speed"></strong>
+
+                    </p>
+                </div>
+                <div class="emoji" id="emoji"> </div>
+                <div class="data" id="current-temperature"></div>
+                <div class="unit">°C</div>
+            </div>
+            <div class="weather-forecast">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="weather-forecast-date">
+                            Thu
+                            <div>
+                                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                                    alt="" width="80" />
+                                <div class="weather-forecast-temperatures">
+                                    <span class="weather-forecast-temperature-max">18</span>
+                                    <span class="weather-forecast-temperature-min">12</span>
+
+                                </div>
+
+                            </div>
                         </div>
-    
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-                    
-    
-     
-    </main>
-    <footer>
-        This project was coded by
+                        <div class="weather-forecast">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="weather-forecast-date">
+                                        Fri
+                                        <div>
+                                            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt=""
+                                                width="80" />
+                                            <div class="weather-forecast-temperatures">
+                                                <span class="weather-forecast-temperature-max">18</span>
+                                                <span class="weather-forecast-temperature-min">12</span>
+                        
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                    <div class="weather-forecast">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <div class="weather-forecast-date">
+                                                    Sat
+                                                    <div>
+                                                        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt=""
+                                                            width="80" />
+                                                        <div class="weather-forecast-temperatures">
+                                                            <span class="weather-forecast-temperature-max">18</span>
+                                                            <span class="weather-forecast-temperature-min">12</span>
+                                    
+                                                        </div>
+                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                <div class="weather-forecast">
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <div class="weather-forecast-date">
+                                                                Sun
+                                                                <div>
+                                                                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt=""
+                                                                        width="80" />
+                                                                    <div class="weather-forecast-temperatures">
+                                                                        <span class="weather-forecast-temperature-max">18</span>
+                                                                        <span class="weather-forecast-temperature-min">12</span>
+                                                
+                                                                    </div>
+                                                
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                            <div class="weather-forecast">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <div class="weather-forecast-date">
+                                                                            Mon
+                                                                            <div>
+                                                                                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt=""
+                                                                                    width="80" />
+                                                                                <div class="weather-forecast-temperatures">
+                                                                                    <span class="weather-forecast-temperature-max">18</span>
+                                                                                    <span class="weather-forecast-temperature-min">12</span>
+                                                            
+                                                                                </div>
+                                                            
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+        </main>
+        <footer>
+            This project was coded by
 
-        <a href="https://www.linkedin.com/in/domoinaratsizafy/" target="_blank">Domoina Ratsizafy</a>
-         is
-          <a href="https://github.com/domoyna/Meteo" target="_blank" >open-sourced on GitHub</a>
-          and
-          <a href="https://meteo-for-weather.netlify.app/"  target="_blank">hosted on Netlify</a>
-        </div>
+            <a href="https://www.linkedin.com/in/domoinaratsizafy/" target="_blank">Domoina Ratsizafy</a>
+            is
+            <a href="https://github.com/domoyna/Meteo" target="_blank">open-sourced on GitHub</a>
+            and
+            <a href="https://meteo-for-weather.netlify.app/" target="_blank">hosted on Netlify</a>
+    </div>
     </footer>
     <script src="script.js"></script>
     </div>
 </body>
+
 </html>
