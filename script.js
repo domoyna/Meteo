@@ -74,7 +74,7 @@ function displayForecast() {
         <div class-"weather-forecast-temperature-max"><strong>18°<strong></div>
         <div class="weather-forecast-temperature-min">15°</div>
         </div>
-        </div>
+        
         `;
   });
   let forecastElement = document.querySelector("#forecast");
